@@ -5,87 +5,108 @@
 }
 
 body {
-    padding: 2%;
+    height: 100vh;
     background-color: #E5E5E5;
-
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-}
-
-.container1 {
-    width: 430px;
-    height: 80px;    
-    border-top: 10px solid #000000;
-    border-bottom: 10px solid #000000;
-
-    position: relative;
-    overflow: hidden;
-    margin:auto;
-    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
-    width: 535px;
-    height: 98px;
+    max-width: 430px;
+    height: 90px;
     padding: 0 2.5px;
     background-color: #E5E5E5;
+    border-top: 10px solid #000000;
+    border-bottom: 10px solid #000000;
+    margin:0 auto;
+    margin-bottom: 18px;
 
     font-weight: 800;
     font-size: 355%;
     color: #000000;
-
-    position: absolute;
-    top: -10px;
-    left: 0;
+    line-height: 70px;
+    text-align: center;
 }
 
-.container2 {
-    margin:auto;
-    width: 430px;
+.time-display {
+    margin:0 auto;
+    max-width: 430px;
+}
+
+.container div:not(:last-child){
+    border-bottom: 0 !important;
+}
+
+.row {
+    height: 90px;
+    padding: 3% 7%;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .black-bg {
-    width: 430px;
-    height: 90px;
-    border: 2px solid #000000;
     background-color: #000000;
     color: #FFFFFF;
-    position: relative;
 }
 
 .white-bg {
-    width: 430px;
-    height: 90px;
-    border: 2px solid #000000;
     background-color: #FFFFFF;
-    position: relative;
-}
-
-.no-borderBottom {
-    border-bottom: 0 !important;
 }
 
 .city {
     font-weight: 800;
-    font-size: 195%;
-    position: absolute;
-    top:14px;
-    left:32px;
+    font-size: 200%;
 }
 
 .date {
     font-weight: 800;
-    font-size: 80%;
+    font-size: 100%;
     font-style:italic;
-    position: absolute;
-    bottom:16px;
-    left:32px;
 }
 
 .time {
     font-weight: 800;
     font-size: 355%;
-    position: absolute;
-    top:3px;
-    right:32px;
+}
+
+@media only screen and (max-width: 450px) {
+    body {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .title {
+        height: 80px;
+        line-height: 60px;
+    }
+
+    .row {
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        font-size: 12px;
+    }
+
+    .title {
+        height: 70px;
+        line-height: 50px;
+    }
+
+    .row {
+        height: 70px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    body {
+        font-size: 11px;
+    }
 }
